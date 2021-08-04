@@ -1,0 +1,8 @@
+pandas
+numpy
+transformers
+sklearn
+fastai
+torch
+matplotlib
+jupyter
