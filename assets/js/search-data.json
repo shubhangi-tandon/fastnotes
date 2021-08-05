@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Multi Label Classification",
-            "content": "import pandas import numpy . Multi Label Classification . Multiple labels can be present in an input | . Loss functions for Multilabel classification . Why won&#39;t cross entropy work . it uses log softmax and is used to pick one category or one winner . What is the loss function we need . binary classiciation for each class - is it valid or not ? 1 - sigmoid(loss) -&gt; should be closer to 0 where label is 1 and sigmoid(loss) where label is 0 why ? binary cross entropy = tlogp + (1-t)log(1-p) when targ = 1 Binary cross entropy loss = logp when targ = 0 bce = log(1-p) . print(&quot;this is a test&quot;) . this is a test . import torch . from torch.nn import BCEWithLogitsLoss . BCEWithLogitsLoss .",
+            "content": "import pandas import numpy . Multi Label Classification . Multiple labels can be present in an input | . Loss functions for Multilabel classification . Why won&#39;t cross entropy work . it uses log softmax and is used to pick one category or one winner . What is the loss function we need . binary classiciation for each class - is it valid or not ? 1 - sigmoid(loss) -&gt; should be closer to 0 where label is 1 and sigmoid(loss) where label is 0 why ? binary cross entropy = tlogp + (1-t)log(1-p) when targ = 1 Binary cross entropy loss = logp when targ = 0 bce = log(1-p) . print(&quot;this is a test&quot;) . this is a test . import torch . from torch.nn import BCEWithLogitsLoss .",
             "url": "https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/08/04/Multilabel_Classification.html",
             "relUrl": "/jupyter/2021/08/04/Multilabel_Classification.html",
             "date": " • Aug 4, 2021"
