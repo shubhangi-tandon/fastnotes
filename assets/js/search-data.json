@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Visualizing your Deep Learning Model",
-            "content": "TSNE . PCA - Principal Component Analysis . UMAP . Reference . UMAP , like TSNE uses Graph Layput Algorithms to arrange data in low-dimensional space. Constructs a high dimensional graph of the data | Optimises a low dimensional graph to be structurally as similar as possible (Like Student - Teacher ? ) | . | .",
+            "content": "TSNE . PCA - Principal Component Analysis . UMAP . Reference . UMAP , like TSNE uses Graph Layput Algorithms to arrange data in low-dimensional space. Constructs a high dimensional graph of the data Fuzzy Simplicial Complex - Representation of weighted graph with edge weights representing the likelihood that two points ate connected | Choose a radius (critical) - Extend a radius out from each point, connecting points in the radial distance of each other Small radius -&gt; Isolated Clusters | Large radius -&gt; Connect Everything together | . | Choose a radius locally based on the distance to each point&#39;s nth nearest neighbour | Stipulate that each poibt ust be connected to atleast its closest neighbour - ensures local st | . | Optimises a low dimensional graph to be structurally as similar as possible (Like Student - Teacher ? ) | . | .",
             "url": "https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/19/Visualizing_DL_Models.html",
             "relUrl": "/jupyter/2021/09/19/Visualizing_DL_Models.html",
             "date": " • Sep 19, 2021"

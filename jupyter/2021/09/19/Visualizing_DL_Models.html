@@ -158,7 +158,18 @@ window.onload = wrap_img;
 <p><a href="https://pair-code.github.io/understanding-umap/">Reference</a></p>
 <ul>
 <li>UMAP , like TSNE uses Graph Layput Algorithms to arrange data in low-dimensional space. <ul>
-<li>Constructs a high dimensional graph of the data </li>
+<li>Constructs a high dimensional graph of the data <ul>
+<li>
+<em>Fuzzy Simplicial Complex</em> - Representation of weighted graph with edge weights representing the likelihood that two points ate connected</li>
+<li>Choose a radius (critical) - Extend a radius out from each point, connecting points in the radial distance of each other<ul>
+<li>Small radius -&gt; Isolated Clusters</li>
+<li>Large radius -&gt; Connect Everything together</li>
+</ul>
+</li>
+<li>Choose a radius locally based on the distance to each point's nth nearest neighbour</li>
+<li>Stipulate that each poibt ust be connected to atleast its closest neighbour - ensures local st</li>
+</ul>
+</li>
 <li>Optimises a low dimensional graph to be structurally as similar as possible (Like Student - Teacher ? )</li>
 </ul>
 </li>
