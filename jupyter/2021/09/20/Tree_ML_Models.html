@@ -4,19 +4,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Advanced Math for DL | Building from Basics</title>
+<title>Tree Based Machine Learning Models | Building from Basics</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Advanced Math for DL" />
+<meta property="og:title" content="Tree Based Machine Learning Models" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Advanced Mathematical concepts for Deep Learning" />
-<meta property="og:description" content="Advanced Mathematical concepts for Deep Learning" />
-<link rel="canonical" href="https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/19/Advanced_Math_Concepts.html" />
-<meta property="og:url" content="https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/19/Advanced_Math_Concepts.html" />
+<meta name="description" content="Understanding Tree Based ML Algos like Random Forest, GBM, Decision Trees" />
+<meta property="og:description" content="Understanding Tree Based ML Algos like Random Forest, GBM, Decision Trees" />
+<link rel="canonical" href="https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/20/Tree_ML_Models.html" />
+<meta property="og:url" content="https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/20/Tree_ML_Models.html" />
 <meta property="og:site_name" content="Building from Basics" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-09-19T00:00:00-05:00" />
+<meta property="article:published_time" content="2021-09-20T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2021-09-19T00:00:00-05:00","url":"https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/19/Advanced_Math_Concepts.html","@type":"BlogPosting","headline":"Advanced Math for DL","dateModified":"2021-09-19T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/19/Advanced_Math_Concepts.html"},"description":"Advanced Mathematical concepts for Deep Learning","@context":"https://schema.org"}</script>
+{"datePublished":"2021-09-20T00:00:00-05:00","url":"https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/20/Tree_ML_Models.html","@type":"BlogPosting","headline":"Tree Based Machine Learning Models","dateModified":"2021-09-20T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/20/Tree_ML_Models.html"},"description":"Understanding Tree Based ML Algos like Random Forest, GBM, Decision Trees","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/fastnotes/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://shubhangi-tandon.github.io/fastnotes/feed.xml" title="Building from Basics" /><link rel="shortcut icon" type="image/x-icon" href="/fastnotes/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,8 +71,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Advanced Math for DL</h1><p class="page-description">Advanced Mathematical concepts for Deep Learning</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-19T00:00:00-05:00" itemprop="datePublished">
-        Sep 19, 2021
+    <h1 class="post-title p-name" itemprop="name headline">Tree Based Machine Learning Models</h1><p class="page-description">Understanding Tree Based ML Algos like Random Forest, GBM, Decision Trees</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-20T00:00:00-05:00" itemprop="datePublished">
+        Sep 20, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -95,19 +95,19 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-wrap flex-justify-end">
           <div class="px-2">
 
-    <a href="https://github.com/shubhangi-tandon/fastnotes/tree/master/_notebooks/2021-09-19-Advanced_Math_Concepts.ipynb" role="button" target="_blank">
+    <a href="https://github.com/shubhangi-tandon/fastnotes/tree/master/_notebooks/2021-09-20-Tree_ML_Models.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/fastnotes/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/shubhangi-tandon/fastnotes/master?filepath=_notebooks%2F2021-09-19-Advanced_Math_Concepts.ipynb" target="_blank">
+    <a href="https://mybinder.org/v2/gh/shubhangi-tandon/fastnotes/master?filepath=_notebooks%2F2021-09-20-Tree_ML_Models.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/fastnotes/assets/badges/binder.svg" alt="Open In Binder"/>
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://colab.research.google.com/github/shubhangi-tandon/fastnotes/blob/master/_notebooks/2021-09-19-Advanced_Math_Concepts.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/shubhangi-tandon/fastnotes/blob/master/_notebooks/2021-09-20-Tree_ML_Models.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/fastnotes/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
@@ -116,96 +116,20 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#Riemannian-manifold">Riemannian manifold </a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#What-is-a-Manifold">What is a Manifold </a></li>
-<li class="toc-entry toc-h3"><a href="#Differentiable-Manifold">Differentiable Manifold </a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#Hilbert-Space-and-Inner-Product">Hilbert Space and Inner Product </a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#Resources">Resources </a></li>
-</ul>
-</li>
 </ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2021-09-19-Advanced_Math_Concepts.ipynb
+# file to edit: _notebooks/2021-09-20-Tree_ML_Models.ipynb
 -->
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Riemannian-manifold">
-<a class="anchor" href="#Riemannian-manifold" aria-hidden="true"><span class="octicon octicon-link"></span></a>Riemannian manifold<a class="anchor-link" href="#Riemannian-manifold"> </a>
-</h2>
-<blockquote>
-<p>Pronounce ree-mai-nian manifold</p>
-</blockquote>
-
-<pre><code>- A manifold with an inner product defined in the tangent space at each point. This allows us to measure angles at a point or measure curves. We can measure length of the curves
-- Has to do with inner products of tangents
-Think of Manifold of being embedded in Rn. 
-- Think of a tangential direction. Head on the surface a distance on the tangent . 
-- Geodesic -&gt; curve whose normal is also perpendicular to the surface. Also the shortest path (locally) between two points. </code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="What-is-a-Manifold">
-<a class="anchor" href="#What-is-a-Manifold" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is a Manifold<a class="anchor-link" href="#What-is-a-Manifold"> </a>
-</h3>
-<blockquote>
-<p>A topological space - a set with a topology which is understood.  It locally resembles Euclidean Space near each point. An n-dimensional manifold is a topological space with the property that each point has a neighbourhood and is like an open subset of n-dimensional Eucliean space.</p>
-<p>One dimensional manifolds - lines and circles (not figure eights)
-Two dimensional maniforlds - surfaces eg plane, sphere</p>
-<p>Surface of the earth - looks like a manifold</p>
-<p>Rotation Space (S03) - 3 dimensional Rotation Space</p>
-<p>Positive Definite Matrices - Form a cone (n xn matrix sits in R(n^2)</p>
-<h3 id="Differentiable-Manifold">
-<a class="anchor" href="#Differentiable-Manifold" aria-hidden="true"><span class="octicon octicon-link"></span></a>Differentiable Manifold<a class="anchor-link" href="#Differentiable-Manifold"> </a>
-</h3>
-<pre><code>- These are important as the differentiable structure allows calculus to be done . Globally drfined differential structure, locally similar enough to vector space. </code></pre>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Hilbert-Space-and-Inner-Product">
-<a class="anchor" href="#Hilbert-Space-and-Inner-Product" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hilbert Space and Inner Product<a class="anchor-link" href="#Hilbert-Space-and-Inner-Product"> </a>
-</h2>
-<pre><code>- Hilbert Space is a vector space with an inner product (dot product). Has to be complete under convergance
-    - Think of it as infinite dimension which is not the case
-    - It has a norm which is a distance function defined on the vector space  </code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Resources">
-<a class="anchor" href="#Resources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources<a class="anchor-link" href="#Resources"> </a>
-</h3>
-<p><a href="https://www.youtube.com/watch?v=MtZV82LCNHc">[1]</a>  Youtube Lecture</p>
-
-</div>
-</div>
-</div>
 </div>
 
 
 
-  </div><a class="u-url" href="/fastnotes/jupyter/2021/09/19/Advanced_Math_Concepts.html" hidden></a>
+  </div><a class="u-url" href="/fastnotes/jupyter/2021/09/20/Tree_ML_Models.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
