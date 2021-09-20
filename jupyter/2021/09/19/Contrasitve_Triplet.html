@@ -4,18 +4,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Building from Basics | Make building ML platforms by strengtheing your Basics</title>
+<title>Contrastive V/S Triplet Loss | Building from Basics</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Building from Basics" />
+<meta property="og:title" content="Contrastive V/S Triplet Loss" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Make building ML platforms by strengtheing your Basics" />
-<meta property="og:description" content="Make building ML platforms by strengtheing your Basics" />
-<link rel="canonical" href="https://shubhangi-tandon.github.io/fastnotes/" />
-<meta property="og:url" content="https://shubhangi-tandon.github.io/fastnotes/" />
+<meta name="description" content="Going from pointwise to pairwise losses in Deep Learning" />
+<meta property="og:description" content="Going from pointwise to pairwise losses in Deep Learning" />
+<link rel="canonical" href="https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/19/Contrasitve_Triplet.html" />
+<meta property="og:url" content="https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/19/Contrasitve_Triplet.html" />
 <meta property="og:site_name" content="Building from Basics" />
-<meta property="og:image" content="https://shubhangi-tandon.github.io/fastnotes/images/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-19T00:00:00-05:00" />
 <script type="application/ld+json">
-{"url":"https://shubhangi-tandon.github.io/fastnotes/","@type":"WebSite","image":"https://shubhangi-tandon.github.io/fastnotes/images/logo.png","headline":"Building from Basics","name":"Building from Basics","description":"Make building ML platforms by strengtheing your Basics","@context":"https://schema.org"}</script>
+{"datePublished":"2021-09-19T00:00:00-05:00","url":"https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/19/Contrasitve_Triplet.html","@type":"BlogPosting","headline":"Contrastive V/S Triplet Loss","dateModified":"2021-09-19T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/19/Contrasitve_Triplet.html"},"description":"Going from pointwise to pairwise losses in Deep Learning","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/fastnotes/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://shubhangi-tandon.github.io/fastnotes/feed.xml" title="Building from Basics" /><link rel="shortcut icon" type="image/x-icon" href="/fastnotes/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -67,72 +68,69 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p>This site is built with <a href="https://github.com/fastai/fastpages">fastpages</a>, An easy to use blogging platform with extra features for Jupyter Notebooks.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<p><img src="/fastnotes/images/diagram.png" alt="" title="https://github.com/fastai/fastpages" /></p>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Contrastive V/S Triplet Loss</h1><p class="page-description">Going from pointwise to pairwise losses in Deep Learning</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-19T00:00:00-05:00" itemprop="datePublished">
+        Sep 19, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
 
-<p><a href="https://github.com/fastai/fastpages">fastpages</a> automates the process of creating blog posts via GitHub Actions, so you don’t have to fuss with conversion scripts.  A full list of features can be found on <a href="https://github.com/fastai/fastpages">GitHub</a>.</p>
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/fastnotes/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
 
-<p>You can edit the <code class="language-plaintext highlighter-rouge">index.html</code> file to change this content.</p>
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
 
-<h1 id="posts">Posts</h1>
-
-
-
-  
-
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
-
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
-
- 
-  
-
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/fastnotes/fastpages/jupyter/2020/02/21/introducing-fastpages.html">
-    Introducing fastpages
+    <a href="https://github.com/shubhangi-tandon/fastnotes/tree/master/_notebooks/2021-09-19-Contrasitve_Triplet.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/fastnotes/assets/badges/github.svg" alt="View On GitHub">
     </a>
-</h3><p class="post-meta-description">An easy to use blogging platform with extra features for <a href="https://jupyter.org/">Jupyter Notebooks</a>.</p><p class="post-meta">Feb 21, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/fastnotes/jupyter/2021/09/19/Visualizing_DL_Models.html">
-    Visualizing your Deep Learning Model
-    </a>
-</h3><p class="post-meta-description">How to Visualize the results of your Deep Learning Model</p><p class="post-meta">Sep 19, 2021</p>
-</li><li><h3>
-    <a class="post-link" href="/fastnotes/jupyter/2021/09/19/Contrasitve_Triplet.html">
-    Contrastive V/S Triplet Loss
-    </a>
-</h3><p class="post-meta-description">Going from pointwise to pairwise losses in Deep Learning</p><p class="post-meta">Sep 19, 2021</p>
-</li><li><h3>
-    <a class="post-link" href="/fastnotes/jupyter/2021/08/08/Navigating_Linux.html">
-    Bash made Easy
-    </a>
-</h3><p class="post-meta-description">A tutorial of common commands that can make working through linux easy</p><p class="post-meta">Aug 8, 2021</p>
-</li><li><h3>
-    <a class="post-link" href="/fastnotes/2021/08/04/Multilabel_Classification.html">
-    Title
-    </a>
-</h3><p class="post-meta">Aug 4, 2021</p>
-</li><li><h3>
-    <a class="post-link" href="/fastnotes/jupyter/2020/02/20/test.html">
-    Fastpages Notebook Blog Post
-    </a>
-</h3><p class="post-meta-description">A tutorial of fastpages for Jupyter notebooks.</p><p class="post-meta">Feb 20, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/fastnotes/markdown/2020/01/14/test-markdown-post.html">
-    An Example Markdown Post
-    </a>
-</h3><p class="post-meta-description">A minimal example of using markdown with fastpages.</p><p class="post-meta">Jan 14, 2020</p>
-</li></ul>
+</div>
 
-    </div>
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/shubhangi-tandon/fastnotes/master?filepath=_notebooks%2F2021-09-19-Contrasitve_Triplet.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastnotes/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/shubhangi-tandon/fastnotes/blob/master/_notebooks/2021-09-19-Contrasitve_Triplet.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastnotes/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-09-19-Contrasitve_Triplet.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+</div>
+
+
+
+  </div><a class="u-url" href="/fastnotes/jupyter/2021/09/19/Contrasitve_Triplet.html" hidden></a>
+</article>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/fastnotes/"></data>
