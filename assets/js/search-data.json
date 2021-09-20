@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Visualizing your Deep Learning Model",
-            "content": "TSNE . PCA - Principal Component Analysis . [UMAP(https://pair-code.github.io/understanding-umap/ .",
+            "content": "TSNE . PCA - Principal Component Analysis . UMAP .",
             "url": "https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/19/Visualizing_DL_Models.html",
             "relUrl": "/jupyter/2021/09/19/Visualizing_DL_Models.html",
             "date": " • Sep 19, 2021"
