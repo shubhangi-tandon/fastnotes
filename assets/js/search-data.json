@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Visualizing your Deep Learning Model",
-            "content": "TSNE . PCA - Principal Component Analysis . UMAP .",
+            "content": "TSNE . PCA - Principal Component Analysis . UMAP . Reference . UMAP , like TSNE uses Graph Layput Algorithms to arrange data in low-dimensional space. Constructs a high dimensional graph of the data | Optimises a low dimensional graph to be structurally as similar as possible (Like Student - Teacher ? ) | . | .",
             "url": "https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/19/Visualizing_DL_Models.html",
             "relUrl": "/jupyter/2021/09/19/Visualizing_DL_Models.html",
             "date": " • Sep 19, 2021"
