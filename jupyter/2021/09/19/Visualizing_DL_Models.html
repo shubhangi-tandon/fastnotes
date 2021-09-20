@@ -168,28 +168,18 @@ window.onload = wrap_img;
 <h2 id="UMAP-:-Uniform-Manifold-Approximation-and-Projection-for-Dimension-Reduction">
 <a class="anchor" href="#UMAP-:-Uniform-Manifold-Approximation-and-Projection-for-Dimension-Reduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>UMAP : Uniform Manifold Approximation and Projection for Dimension Reduction<a class="anchor-link" href="#UMAP-:-Uniform-Manifold-Approximation-and-Projection-for-Dimension-Reduction"> </a>
 </h2>
+<pre><code>- UMAP , like TSNE uses Graph Layput Algorithms to arrange data in low-dimensional space. 
+    - Constructs a high dimensional graph of the data 
+        - *Fuzzy Simplicial Complex* - Representation of weighted graph with edge weights representing the likelihood that two points ate connected
+        - Choose a radius (critical) - Extend a radius out from each point, connecting points in the radial distance of each other
+            - Small radius -&gt; Isolated Clusters
+            - Large radius -&gt; Connect Everything together
+        - Choose a radius locally based on the distance to each point's nth nearest neighbour
+        - Stipulate that each poibt ust be connected to atleast its closest neighbour - ensures local structure is preserved
+    - Optimises a low dimensional graph to be structurally as similar as possible (Like Student - Teacher ? )
+        - Same process as TSNE but few clever tricks to speed up the process
+</code></pre>
 <p><a href="https://pair-code.github.io/understanding-umap/">Reference</a></p>
-<ul>
-<li>UMAP , like TSNE uses Graph Layput Algorithms to arrange data in low-dimensional space. <ul>
-<li>Constructs a high dimensional graph of the data <ul>
-<li>
-<em>Fuzzy Simplicial Complex</em> - Representation of weighted graph with edge weights representing the likelihood that two points ate connected</li>
-<li>Choose a radius (critical) - Extend a radius out from each point, connecting points in the radial distance of each other<ul>
-<li>Small radius -&gt; Isolated Clusters</li>
-<li>Large radius -&gt; Connect Everything together</li>
-</ul>
-</li>
-<li>Choose a radius locally based on the distance to each point's nth nearest neighbour</li>
-<li>Stipulate that each poibt ust be connected to atleast its closest neighbour - ensures local structure is preserved</li>
-</ul>
-</li>
-<li>Optimises a low dimensional graph to be structurally as similar as possible (Like Student - Teacher ? )<ul>
-<li>Same process as TSNE but few clever tricks to speed up the process</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 
 </div>
 </div>
@@ -212,11 +202,9 @@ window.onload = wrap_img;
 <h3 id="UMAP-v/s-TSNE-v/s-PCA">
 <a class="anchor" href="#UMAP-v/s-TSNE-v/s-PCA" aria-hidden="true"><span class="octicon octicon-link"></span></a>UMAP v/s TSNE v/s PCA<a class="anchor-link" href="#UMAP-v/s-TSNE-v/s-PCA"> </a>
 </h3>
-<ul>
-<li>UMAP is often better at preserving global structure in final projection</li>
-<li>Inter-Cluster relations are potentially more meaningful than in t-SNE</li>
-<li>Compared to PCA - any given axis or distance in lower dimensin isn't directly interpretable</li>
-</ul>
+<pre><code>- UMAP is often better at preserving global structure in final projection
+- Inter-Cluster relations are potentially more meaningful than in t-SNE
+- Compared to PCA - any given axis or distance in lower dimensin isn't directly interpretable</code></pre>
 
 </div>
 </div>
