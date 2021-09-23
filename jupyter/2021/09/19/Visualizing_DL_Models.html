@@ -119,6 +119,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#TSNE">TSNE </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Perplexity">Perplexity </a></li>
+<li class="toc-entry toc-h3"><a href="#Interpretability">Interpretability </a></li>
 <li class="toc-entry toc-h3"><a href="#PCA---Principal-Component-Analysis">PCA - Principal Component Analysis </a></li>
 </ul>
 </li>
@@ -150,47 +151,18 @@ window.onload = wrap_img;
 </h3>
 <pre><code>  Perplexity lossely defines how to balance attention between local and global aspects of your data. Os a guess about the number of close neighbours each point has. Typical values are between 5 and 50
 - For lower vals - TSNE tensds to spread out projected data with very little preservation of flobal structure
-- Extremely high perplexity to begin seeing global structure - leads to. very high runtime</code></pre>
+- Extremely high perplexity to begin seeing global structure - leads to. very high runtime
+</code></pre>
+<h3 id="Interpretability">
+<a class="anchor" href="#Interpretability" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interpretability<a class="anchor-link" href="#Interpretability"> </a>
+</h3>
+<pre><code>  - Cluster sizes in tSNE plot mean nothing 
+  - Distances between clusters might not mean anything
+  - Random noise doesn't always look random</code></pre>
 
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tsne</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-fg">/var/folders/x6/mnsm5zg95r36m4xqgq07bh5h39cb0f/T/ipykernel_42545/3124754021.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> tsne
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'tsne'</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
