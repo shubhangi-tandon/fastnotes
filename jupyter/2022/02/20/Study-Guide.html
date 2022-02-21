@@ -4,19 +4,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Contrastive V/S Triplet Loss | Building from Basics</title>
+<title>Study Guide | Building from Basics</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Contrastive V/S Triplet Loss" />
+<meta property="og:title" content="Study Guide" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Going from pointwise to pairwise losses in Deep Learning" />
-<meta property="og:description" content="Going from pointwise to pairwise losses in Deep Learning" />
-<link rel="canonical" href="https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/19/Contrasitve_Triplet.html" />
-<meta property="og:url" content="https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/19/Contrasitve_Triplet.html" />
+<meta name="description" content="Study Guide for ML Interviews Prep" />
+<meta property="og:description" content="Study Guide for ML Interviews Prep" />
+<link rel="canonical" href="https://shubhangi-tandon.github.io/fastnotes/jupyter/2022/02/20/Study-Guide.html" />
+<meta property="og:url" content="https://shubhangi-tandon.github.io/fastnotes/jupyter/2022/02/20/Study-Guide.html" />
 <meta property="og:site_name" content="Building from Basics" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-09-19T00:00:00-05:00" />
+<meta property="article:published_time" content="2022-02-20T00:00:00-06:00" />
 <script type="application/ld+json">
-{"datePublished":"2021-09-19T00:00:00-05:00","url":"https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/19/Contrasitve_Triplet.html","@type":"BlogPosting","headline":"Contrastive V/S Triplet Loss","dateModified":"2021-09-19T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://shubhangi-tandon.github.io/fastnotes/jupyter/2021/09/19/Contrasitve_Triplet.html"},"description":"Going from pointwise to pairwise losses in Deep Learning","@context":"https://schema.org"}</script>
+{"datePublished":"2022-02-20T00:00:00-06:00","url":"https://shubhangi-tandon.github.io/fastnotes/jupyter/2022/02/20/Study-Guide.html","@type":"BlogPosting","headline":"Study Guide","dateModified":"2022-02-20T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://shubhangi-tandon.github.io/fastnotes/jupyter/2022/02/20/Study-Guide.html"},"description":"Study Guide for ML Interviews Prep","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/fastnotes/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://shubhangi-tandon.github.io/fastnotes/feed.xml" title="Building from Basics" /><link rel="shortcut icon" type="image/x-icon" href="/fastnotes/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,8 +71,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Contrastive V/S Triplet Loss</h1><p class="page-description">Going from pointwise to pairwise losses in Deep Learning</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-19T00:00:00-05:00" itemprop="datePublished">
-        Sep 19, 2021
+    <h1 class="post-title p-name" itemprop="name headline">Study Guide</h1><p class="page-description">Study Guide for ML Interviews Prep</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-02-20T00:00:00-06:00" itemprop="datePublished">
+        Feb 20, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -95,19 +95,19 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-wrap flex-justify-end">
           <div class="px-2">
 
-    <a href="https://github.com/shubhangi-tandon/fastnotes/tree/master/_notebooks/2021-09-19-Contrasitve_Triplet.ipynb" role="button" target="_blank">
+    <a href="https://github.com/shubhangi-tandon/fastnotes/tree/master/_notebooks/2022-02-20-Study-Guide.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/fastnotes/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/shubhangi-tandon/fastnotes/master?filepath=_notebooks%2F2021-09-19-Contrasitve_Triplet.ipynb" target="_blank">
+    <a href="https://mybinder.org/v2/gh/shubhangi-tandon/fastnotes/master?filepath=_notebooks%2F2022-02-20-Study-Guide.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/fastnotes/assets/badges/binder.svg" alt="Open In Binder"/>
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://colab.research.google.com/github/shubhangi-tandon/fastnotes/blob/master/_notebooks/2021-09-19-Contrasitve_Triplet.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/shubhangi-tandon/fastnotes/blob/master/_notebooks/2022-02-20-Study-Guide.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/fastnotes/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
@@ -116,20 +116,78 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
+<li class="toc-entry toc-h3"><a href="#Linear-Regression">Linear Regression </a></li>
 </ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2021-09-19-Contrasitve_Triplet.ipynb
+# file to edit: _notebooks/2022-02-20-Study-Guide.ipynb
 -->
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Linear-Regression">
+<a class="anchor" href="#Linear-Regression" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linear Regression<a class="anchor-link" href="#Linear-Regression"> </a>
+</h3>
+<ol>
+<li>
+<p>What is Linear Regression ?</p>
+<ul>
+<li>
+<p>Answer : If we assume that are input x has a linear relationship with the output y and that noise is normally defined, we can define y as a weighted sum of the elements in X.</p>
+<p>$$\hat{Y} = \sum ( W_i , X_i) + b $$ where X has i elements, W is the weight vector and B is the bias in our data</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>
+<p>What is Bias ?</p>
+<ul>
+<li>
+<p>Answer : Bias (also called offset or intercept) - what value will y take if input is 0. It is also reflective of the error introduced by approximating a real life model, or how much the model prediction differs from the target value. Bias can also be introduced during modelling that assumes subject matter expertise about the data. A high bias can lead to underfitting. Bias is also used as regularization so that the model does not overfit to training data.</p>
+<p><strong>TLDR : High Bias Leads to Underfitting</strong></p>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>
+<p>What is Variance
+    &amp;nbspAnswer: Variance indicates how robust is your model to new data. A low variance means that you are certain about how the model will perform given new data. We want to have low variance in our model . Mathematically , variance error in the model is $$Var(f(x)) =E(X^2) - E(X)^2$$</p>
+<p><strong>TLDR : High Variance Leads to Overfitting</strong></p>
+</li>
+</ol>
+<ol>
+<li>What is Bias-Variance Tradeoff ?<ul>
+<li>High Bias leads to underfitting and not learning enough from training data, and High Variance leads to overfitting on training data and not being robust enough for test data. The error on a model is a sym off the Bias, Variance and Irreducible Error of the model . 
+$$Err(x) = Bias^2 + Variance + Irreducible Error$$<ul>
+<li>If the model is too simple(less features) then high bias and low variance</li>
+<li>If the model is complicated (more features) then low bias and high variance</li>
+<li>The tradeoff to find a good balance between bias and variance that minimizes the error is called Bias-Variance Tradeoff</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>What is the Loss Function for Linear Regression ?<ul>
+<li>Answer </li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
 </div>
 
 
 
-  </div><a class="u-url" href="/fastnotes/jupyter/2021/09/19/Contrasitve_Triplet.html" hidden></a>
+  </div><a class="u-url" href="/fastnotes/jupyter/2022/02/20/Study-Guide.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
